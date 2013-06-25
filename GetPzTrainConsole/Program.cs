@@ -31,7 +31,7 @@ namespace GetPzTrainConsole
             IEnumerable<JToken> trains;
             do
             {
-                Console.WriteLine("Sending request...");
+                Console.WriteLine("{0} Sending request...", DateTime.Now.ToShortTimeString());
                 var j = PZKnocker.SendRequest(PZKnocker.Address, p);
                 Console.WriteLine("We got it! Searching...");
                 trains = j.HaveTrains(p);
